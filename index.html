@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Promise of Forever ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <!-- Falling petals, stars, hearts canvas -->
+  <canvas id="effects-canvas"></canvas>
+  <!-- Custom Luxury Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <!-- Loading Screen -->
+  <div class="loader-screen" id="loader">
+    <div class="heartbeat-loader">❤️</div>
+    <div class="loader-text">Preparing something special...</div>
+  </div>
+  <!-- Floating Music Widget -->
+  <div class="music-widget gla     ss-panel muted" id="music-widget">
+    <div class="music-icon" id="music-icon">🎵</div>
+    <div class="music-text" id="music-text">Play Soundtrack</div>
+    <div class="music-bars">
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+    </div>
+  </div>
+  <!-- Main Content Wrapper -->
+  <main class="main-wrapper" id="main-content">
+    <!-- Section 1: Hero -->
+    <section class="section-hero" id="hero-section">
+      <div class="hero-box glass-panel">
+        <h1 class="romantic-font">Hello, Beautiful...</h1>
+        
+        <div class="typewriter-container">
+          <div class="typewriter-text" id="typewriter-element"></div>
+        </div>
+        <div class="waiting-text" id="waiting-prompt">
+          I have been waiting to ask you something...
+        </div>
+        <div class="hero-btn-container" id="hero-action-container">
+          <button class="luxury-btn" id="open-heart-btn">✨ Open My Heart ✨</button>
+        </div>
+      </div>
+    </section>
+    <!-- Section 2: Envelope / Letter -->
+    <section class="section-envelope" id="envelope-section">
+      <div class="envelope-wrapper" id="envelope-wrapper">
+        <div class="envelope" id="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
+          <div class="envelope-pocket-sides"></div>
+          <div class="letter-sheet" id="letter-sheet">
+            <div class="letter-content" id="letter-content">
+              Every little moment with you became my favorite memory.
+              Your smile brightens my darkest days.
+              Your voice is my favorite melody.
+              You became the reason behind my happiness.
+              If destiny gives me only one wish...
+              I will always choose YOU. ❤️
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 3: Proposal -->
+    <section class="section-proposal" id="proposal-section">
+      <!-- Question Card -->
+      <div class="proposal-box glass-panel" id="proposal-box">
+        <h2 class="proposal-title">✨ Will You Be Mine Forever? ❤️ ✨</h2>
+        
+        <div class="proposal-buttons">
+          <button class="luxury-btn btn-yes" id="btn-yes">💖 YES</button>
+          
+          <div style="position: relative;">
+            <button class="luxury-btn btn-no" id="btn-no">🥺 NO</button>
+            <div class="no-message-bubble" id="no-bubble">Are you really sure?</div>
+          </div>
+        </div>
+      </div>
+      <!-- Yes Vows & Celebration Card -->
+      <div class="yes-celebration" id="yes-celebration">
+        <div class="glass-panel" style="padding: 60px 40px; max-width: 700px; display: flex; flex-direction: column; gap: 30px; align-items: center;">
+          <h2 class="celebration-title">You just made me the happiest person in the universe. ❤️</h2>
+          <p class="celebration-vows">
+            "I promise to love you,<br>
+            respect you,<br>
+            protect your smile,<br>
+            and stand beside you forever."
+          </p>
+          <div class="celebration-date-card glass-panel">
+            <span class="celebration-date-label">Our Forever Begins</span>
+            <span class="celebration-date-value" id="proposal-date"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- UNLOCKED CONTENT (ONLY REVEALED AFTER YES) -->
+    <div class="unlock-on-yes" id="unlocked-content">
+      
+      <!-- Section 4: Memory Timeline -->
+      <section class="section-timeline">
+        <h2>Our Beautiful Journey</h2>
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          
+          <!-- Card 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel reveal-on-scroll">
+              <div class="timeline-date">The First Meeting</div>
+              <p class="timeline-text">The moment our eyes met, and the world slowed down. It felt like destiny writing its very first sentence.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel reveal-on-scroll">
+              <div class="timeline-date">The First Conversation</div>
+              <p class="timeline-text">Hours went by like seconds. We talked about everything and nothing, laughing and finding a home in each other's voice.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel reveal-on-scroll">
+              <div class="timeline-date">The Sweet Milestones</div>
+              <p class="timeline-text">Holding hands, walks under the rain, sharing coffees, secrets, and silences. Every day since then became a precious chapter.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel reveal-on-scroll">
+              <div class="timeline-date">Today & Beyond</div>
+              <p class="timeline-text">Taking this beautiful leap of faith. Hand in hand, writing our happily ever after together.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 5: Gallery -->
+      <section class="section-gallery">
+        <h2>A Gallery of Us</h2>
+        <div class="gallery-grid">
+          
+          <!-- Card 1 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo1.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">📸</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">The Sweetest Smile</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo2.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🌹</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">A Romantic Walk</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo3.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">☕</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Shared Coffees</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo4.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🌌</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Under the Stars</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo5.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🏖️</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Sunny Escapes</div>
+          </div>
+          <!-- Card 6 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo6.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🎉</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Joyful Celebrations</div>
+          </div>
+          <!-- Card 7 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo7.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">❄️</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Cosy Winters</div>
+          </div>
+          <!-- Card 8 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo8.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🎒</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Adventures Together</div>
+          </div>
+          <!-- Card 9 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo9.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🌅</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Beautiful Sunsets</div>
+          </div>
+          <!-- Card 10 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo10.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🍦</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Sweetest Treats</div>
+          </div>
+          <!-- Card 11 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">
+                <img src="photo13.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🧸</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Soft Embraces</div>
+          </div>
+          <!-- Card 12 -->
+          <div class="gallery-card glass-panel reveal-on-scroll">  
+              <img src="photo12.jpeg" alt="Shared Coffees" class="gallery-image">
+
+            <div class="gallery-image-wrapper">
+              <div class="gallery-placeholder">
+                <span class="gallery-placeholder-icon">🪄</span>
+                <span class="gallery-placeholder-text">Add Picture</span>
+              </div>
+            </div>
+            <div class="gallery-title">Magical Moments</div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6: Final Scene -->
+      <section class="section-final" id="final-section">
+        <div class="final-box" id="final-box">
+          <div class="final-quote">
+            "Meeting you wasn't luck...<br>
+            It was the most beautiful chapter of my life. ❤️"
+          </div>
+          
+          <div class="final-heart-wrapper">
+            <div class="final-moon"></div>
+            <div class="final-heart">
+              ❤️
+              <div class="final-heart-text">I LOVE YOU</div>
+            </div>
+          </div>
+          <div class="final-tagline">
+            "Forever begins with one YES."
+          </div>
+          <div class="final-signature">
+            Made with endless love,<br>
+            just for <strong>YOU</strong> ❤️
+          </div>
+        </div>
+      </section>
+    </div> <!-- End Unlocked Content -->
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
